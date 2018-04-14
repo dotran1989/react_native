@@ -77,3 +77,18 @@ _ 'const': cannot change value
 _ class Greeting extends Component { // private component
 
 _ 'props': public property
+
+Props means "public property" in a React Native class. 
+Developer can set props for a Component, but inside a Component, a props is read-only. Only change outside the Component.
+
+===================================
+05-State in React Native Component
+
+_ this.state: private property, can change value. You can assign state only in constructor.
+Use 'setState' in other place.
+
+_ 'undefined is not an object (evaluating 'func.apply')' -> call variable not funtion.
+
+var taskToDo = () => {...}
+setInterval(taskToDo(), 1000)
+-> setInterval(taskToDo, 1000)
