@@ -43,8 +43,37 @@ Monitor logs will go to C:\Users\QUOCCU~1\AppData\Local\Temp\flow\EzCzBleBreactn
 Done in 34.10s.
 
 ===================================
+Video 3.
+
 export = public
 default = make this class "default" when you import from other files
+
+_ export default class HelloWorld extends Component { // public component
+
 JSX = javascript extension
+<Text>{ hello }</Text>
 
 let = cannot re-assign to other type but can change value
+
+===================================
+04-Customize React Native components using Props
+
+<Image source={ {uri:"link_image"} }></Image>
+_ "source" = props of Image = "public property" of Image component
+
+_ add 'width' and 'height' for show image
+_ 'var': you can change the value to any type.
+
+// object
+var imageSource = { 
+            uri:"https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/HONDA_ASIMO.jpg/200px-HONDA_ASIMO.jpg" 
+};
+
+// string
+imageSource = 'abc';
+
+_ 'const': cannot change value
+
+_ class Greeting extends Component { // private component
+
+_ 'props': public property
