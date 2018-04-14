@@ -114,3 +114,42 @@ _ alignItems -> column: top, center, bottom
 + 'flexDirection': column
 _ justifyContent -> column: top, center, bottom
 _ alignItems -> Row: start, center, end
+
+===================================
+10-TextInput#1.Create a basic TextInput with Email and Password
+
+_ render -> return (...);
+_ arrow function -> return {...};
+
+// ----
+onChangeText={
+    (text) => {
+		// this.state: not allow
+        this.setState(
+            (previousState) => {
+                return {
+                    typeText: text
+                 };
+            }
+         );
+    }
+}
+				
+// ---- babel
+(function (text) {
+    // this.state: not allow
+    undefined.setState(function (previousState) {
+        return {
+            typeText: text
+        };
+    });
+});
+
+// ----	myself
+function(text) {
+	this.setState(previousState, text)
+}
+
+setState(previousState, text) {
+	return this.typeText = text;
+}
