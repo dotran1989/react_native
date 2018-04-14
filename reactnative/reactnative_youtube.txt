@@ -1,0 +1,50 @@
+INSTAL YARN PACKAGE
+
+$ npm install -g create-react-native-app
+$ create-react-native-app <project_name>
+
+// install yarn package from download: https://yarnpkg.com/lang/en/docs/install/
+
+$ yarn global add yarn-install
+
+OR
+
+npm install yarn -global
+C:\Users\QUOC CUONG\AppData\Roaming\npm\yarn -> C:\Users\QUOC CUONG\AppData\Roam
+ing\npm\node_modules\yarn\bin\yarn.js
+
+===================================
+$ yarn android
+
+===================================
+Babel command line interface and preset flow
+
+$ yarn add --dev babel-cli babel-preset-flow
+
+$ nano .babelrc
+
+$ yarn add --dev flow-bin
+
+$ yarn run flow
+
+Wrong version of Flow. The config specifies version ^0.67.0 but this is version
+0.69.0
+Could not start Flow server!
+
+$ yarn add --dev flow-bin@0.67.0
+
+=> RESULT:
+$ E:\learning\reactnative\tutorial\node_modules\.bin\flow
+Launching Flow server for E:\learning\reactnative\tutorial
+Spawned flow server (pid=8232)
+Logs will go to C:\Users\QUOCCU~1\AppData\Local\Temp\flow\EzCzBlearningzBtivezBtutorial.log
+Monitor logs will go to C:\Users\QUOCCU~1\AppData\Local\Temp\flow\EzCzBleBreactnativezBtutorial.monitor_log
+←[0KNo errors!t. Server is handling a request (collating errors): |%)): |
+Done in 34.10s.
+
+===================================
+export = public
+default = make this class "default" when you import from other files
+JSX = javascript extension
+
+let = cannot re-assign to other type but can change value
