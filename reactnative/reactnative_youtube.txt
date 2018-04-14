@@ -92,3 +92,14 @@ _ 'undefined is not an object (evaluating 'func.apply')' -> call variable not fu
 var taskToDo = () => {...}
 setInterval(taskToDo(), 1000)
 -> setInterval(taskToDo, 1000)
+
+===================================
+06-Style a React Native component with StyleSheet
+
+_ Array of styles: priority for last index
+<Text style= { [styles.secondStyle, styles.textStyle] }>Hello!</Text>
+
+===================================
+07-Customize width and height props with Fixed and Flex dimensions
+
+_ 'flex': flexible, a positive number
