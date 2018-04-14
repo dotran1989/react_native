@@ -103,3 +103,14 @@ _ Array of styles: priority for last index
 07-Customize width and height props with Fixed and Flex dimensions
 
 _ 'flex': flexible, a positive number
+
+_ Column: top, center, bottom
+_ Row: start, center, end
+
++ 'flexDirection': row
+_ justifyContent -> Row: start, center, end
+_ alignItems -> column: top, center, bottom
+
++ 'flexDirection': column
+_ justifyContent -> column: top, center, bottom
+_ alignItems -> Row: start, center, end
