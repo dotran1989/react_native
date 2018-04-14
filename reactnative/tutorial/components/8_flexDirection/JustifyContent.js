@@ -8,11 +8,8 @@ export default class FlexExample extends Component {
                     backgroundColor:'aquamarine',
                     flex: 1,
                     flexDirection: 'column',
-                    // justifyContent: 'flex-start'
-                    // justifyContent: 'flex-end'
-                    // justifyContent: 'space-between'
-                    // justifyContent: 'space-around'
-                    justifyContent: 'center'
+                    justifyContent: 'center',
+                    alignItems: 'flex-start'
                 }}>
                 <Text style={{width: 50, height: 50, backgroundColor:'red'}}></Text>
                 <Text style={{width: 50, height: 50, backgroundColor:'blue'}}></Text>
