@@ -153,3 +153,29 @@ function(text) {
 setState(previousState, text) {
 	return this.typeText = text;
 }
+
+===================================
+11-TextInput#2. Working with multiline TextInput and Keyboard
+
+_ multiline={true}
+_ editable={true}
+
+_ Add listener keyboard:
+
+componentWillMount() {
+    this.keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', () => {
+        this.setState(() => {
+            return {typeText: 'keyboard is shown'}
+        })
+    });
+    this.keyboardHideShowListener = Keyboard.addListener('keyboardDidHide', () => {
+        this.setState(() => {
+            return {typeText: 'keyboard is hide'}
+        })
+    });
+}
+
+componentWillUnmount() {
+    this.keyboardDidShowListener.remove();
+	this.keyboardHideShowListener.remove();
+}
