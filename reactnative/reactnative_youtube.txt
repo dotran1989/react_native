@@ -190,4 +190,8 @@ $ npm install react-native-button --save
 _ Command run-android unrecognized. Did you mean to run this inside a react-native project?
 => I just ran "yarn" with no arguments and it fixed it.
 
+===================================
+13-Touches#2.TouchableHighlight, TouchableNativeFeedback,TouchableOpacity,TouchableWithoutFeedback
+
+_ TouchableHighlight: highlight when touched
 

@@ -9,6 +9,7 @@ import { AppRegistry } from 'react-native';
 // import FlexExample from './components/8_9_flexDirection_justifyContent/FlexExample';
 // import JustifyContent from './components/8_9_flexDirection_justifyContent/JustifyContent';
 // import textInput from './components/10_11_textInput/textInput';
-import button from './components/12_handle_button/button';
+// import button from './components/12_handle_button/button';
+import touchable from './components/13_touchable/touchable'
 
-AppRegistry.registerComponent('tutorial', () => button);
+AppRegistry.registerComponent('tutorial', () => touchable);
