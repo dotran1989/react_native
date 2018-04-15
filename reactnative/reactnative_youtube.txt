@@ -179,3 +179,15 @@ componentWillUnmount() {
     this.keyboardDidShowListener.remove();
 	this.keyboardHideShowListener.remove();
 }
+
+===================================
+12-Touches and gestures#1. Display and handle a basic React Native Button
+
+_ Install button
+$ npm install react-native-button --save
+
+*** Error:
+_ Command run-android unrecognized. Did you mean to run this inside a react-native project?
+=> I just ran "yarn" with no arguments and it fixed it.
+
+
