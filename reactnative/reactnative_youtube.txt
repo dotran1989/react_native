@@ -195,3 +195,18 @@ _ Command run-android unrecognized. Did you mean to run this inside a react-nati
 
 _ TouchableHighlight: highlight when touched
 
+===================================
+14-ScrollView#1.Draw a basic ScrollView with mixed Components
+
+_ Dismiss keyboard in TextInput when drag scrollview:
+
+keyboardDismissMode='on-drag'
+
+_ Scale: only in IOS
+
+maximumZoomScale={2}
+minimumZoomScale={0.2}
+
+_ Add style:
+contentContainerStyle={{paddingLeft: 20}}
+

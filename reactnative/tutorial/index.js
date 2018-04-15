@@ -10,6 +10,7 @@ import { AppRegistry } from 'react-native';
 // import JustifyContent from './components/8_9_flexDirection_justifyContent/JustifyContent';
 // import textInput from './components/10_11_textInput/textInput';
 // import button from './components/12_handle_button/button';
-import touchable from './components/13_touchable/touchable'
+// import touchable from './components/13_touchable/touchable'
+import VerticalScrollView from './components/14_scrollview/VerticalScrollView'
 
-AppRegistry.registerComponent('tutorial', () => touchable);
+AppRegistry.registerComponent('tutorial', () => VerticalScrollView);
