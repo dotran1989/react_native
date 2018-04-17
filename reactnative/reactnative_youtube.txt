@@ -210,3 +210,5 @@ minimumZoomScale={0.2}
 _ Add style:
 contentContainerStyle={{paddingLeft: 20}}
 
+get updating Cordinate each 10 miliseconds
+
