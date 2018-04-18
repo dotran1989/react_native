@@ -5,6 +5,8 @@
     "flow-bin": "^0.69.0"
   },
   "dependencies": {
-    "react-native-button": "^2.3.0"
+    "react-native-button": "^2.3.0",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0"
   }
 }

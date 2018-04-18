@@ -11,6 +11,15 @@ import { AppRegistry } from 'react-native';
 // import textInput from './components/10_11_textInput/textInput';
 // import button from './components/12_handle_button/button';
 // import touchable from './components/13_touchable/touchable'
-import VerticalScrollView from './components/14_scrollview/VerticalScrollView'
+// import VerticalScrollView from './components/14_scrollview/VerticalScrollView'
 
-AppRegistry.registerComponent('tutorial', () => VerticalScrollView);
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+
+let store = createStore();
+const App = () => {
+    <Provider store={store}>
+    </Provider>
+};
+
+AppRegistry.registerComponent('tutorial', () => App);
