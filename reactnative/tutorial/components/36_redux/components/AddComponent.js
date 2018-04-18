@@ -4,9 +4,10 @@ import { AppRegistry, FlatList,
     TouchableHighlight,
     RefreshControl, TextInput } from 'react-native';
 
-import { addNewTask } from '../actions';
+import * as actions from '../actions';
+import { connect } from 'react-redux';
 
-export default class AddComponent extends Component {
+class AddComponent extends Component {
     constructor(props) {
         super(props);
         this.state = ({
@@ -16,9 +17,9 @@ export default class AddComponent extends Component {
 
     render() {
         return (
-            <View style={containerStyle}>
+            <View style={styles.containerStyle}>
                 <TextInput
-                    style={textInputStyle}
+                    style={styles.textInputStyle}
                     keyboardType='default'
                     placeholderTextColor='white'
                     placeholder='Enter task name'
@@ -37,7 +38,7 @@ export default class AddComponent extends Component {
                             return;
                         }
                         // Call click event => use "Container"
-                        this.props.onClickAdd(this.state.newTaskName);
+                        this.props.addNewTask(this.state.newTaskName);
                     }}
                 >
                     <Image
@@ -68,3 +69,11 @@ const styles = {
         color: 'white'
     }
 }
+
+const mapStateToProps = (state) => {
+    return {
+
+    };
+}
+
+export default connect(mapStateToProps, actions)(AddComponent);

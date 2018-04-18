@@ -6,16 +6,17 @@ import { AppRegistry, FlatList,
 
 export default class TaskItemComponent extends Component {
     render() {
+        //alert("item:" + this.props.taskName);
         return (
-            <View style={{ flex: 1 }}>
+            <View style={{ flex: 1, backgroundColor: 'red' }}>
                 <TouchableOpacity style={styles.touchableStyle}
                     onPress={() => {
                         
                     }}>
+                    <Text style={{ margin: 20, color: this.props.completed == true ? 'darkgreen' : 'black' }}>
+                        {this.props.taskName}
+                    </Text>
                 </TouchableOpacity>
-                <Text style={{ margin: 20, color: this.props.completed == true ? 'darkgreen' : 'black' }}>
-                    {this.props.taskName}
-                </Text>
             </View>
         );
     }

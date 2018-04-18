@@ -23,9 +23,9 @@ import allReducers from './components/36_redux/reducers';
 let store = createStore(allReducers);
 const App = () => {
     return (
-<Provider store={store}>
-        <TaskManagerComponent />
-    </Provider>
+        <Provider store={store}>
+            <TaskManagerComponent />
+        </Provider>
     );
     
 };

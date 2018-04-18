@@ -4,16 +4,16 @@ import { AppRegistry, FlatList,
     TouchableHighlight,
     RefreshControl, TextInput } from 'react-native';
 
-//import AddContainer from '../containers/AddContainer';
-//import TaskListContainer from '../containers/TaskListContainer';
+// import AddContainer from '../containers/AddContainer';
+import TaskListComponent from '../components/TaskListComponent';
+import AddComponent from './AddComponent';
 
 export default class TaskManagerComponent extends Component {
     render() {
         return (
             <View style={{ flex: 1, margin: Platform.OS === 'ios' ? 34 : 0}}>
-                {/* <AddContainer /> */}
-                {/* <TaskListContainer /> */}
-                <Text>ABC</Text>
+                <AddComponent />
+                <TaskListComponent />
             </View>
         );
     }

@@ -1,6 +1,7 @@
 import AddComponent from '../components/AddComponent';
 import { addNewTask } from '../actions';
 import { connect } from 'react-redux';
+import * as actions from '../actions';
 
 const mapStateToProps = state => {
     return {
