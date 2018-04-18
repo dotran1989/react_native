@@ -210,3 +210,8 @@ minimumZoomScale={0.2}
 _ Add style:
 contentContainerStyle={{paddingLeft: 20}}
 
+
+===================================
+36-Redux in React Native #2. Create store, provider, actions of a todo list app
+
+_ Action: must have 'type' and other properties
