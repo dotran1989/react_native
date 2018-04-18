@@ -237,4 +237,13 @@ case TOGGLE_ONE_TASK:
 // first, iterate the task's array, using 'map;
 // second, clone to a new object, then change
 
+===================================
+39-Redux in React Native #5. Add containers to the todo list Redux app
+
+_ Container will:
++ Help component dispatch actions
++ convert component's state => prop
++ convert component's dispatch => prop
+
+_ onClickAdd = a function props which dispatch action
 

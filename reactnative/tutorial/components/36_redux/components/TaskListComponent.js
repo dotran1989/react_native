@@ -3,6 +3,7 @@ import { AppRegistry, FlatList,
     Text, View, Image, Alert, Platform,
     TouchableHighlight,
     RefreshControl, TextInput } from 'react-native';
+import TaskItemContainer from '../containers/TaskItemContainer';
 
 export default class TaskListComponent extends Component {
     render() {
@@ -11,7 +12,8 @@ export default class TaskListComponent extends Component {
                 data={this.props.tasks}
                 renderItem={({ item, index }) => {
                     return (
-                        alert('abc')
+                        <TaskItemContainer {...item}>
+                        </TaskItemContainer>
                     );
                 }}
                 >

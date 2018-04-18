@@ -12,6 +12,7 @@ import { AppRegistry } from 'react-native';
 // import button from './components/12_handle_button/button';
 // import touchable from './components/13_touchable/touchable'
 // import VerticalScrollView from './components/14_scrollview/VerticalScrollView'
+import TaskManagerComponent from './components/36_redux/components/TaskManagerComponent';
 
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
@@ -21,6 +22,7 @@ import allReducers from './components/36_redux/reducers';
 let store = createStore(allReducers);
 const App = () => {
     <Provider store={store}>
+        <TaskManagerComponent />
     </Provider>
 };
 
