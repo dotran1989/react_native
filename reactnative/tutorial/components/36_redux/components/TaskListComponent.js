@@ -18,6 +18,6 @@ export default class TaskListComponent extends Component {
                 }}
                 >
             </FlatList>
-        )
+        );
     }
 };

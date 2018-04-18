@@ -1,3 +1,4 @@
+import React, { Component } from 'react';
 import { AppRegistry } from 'react-native';
 // import HelloWorld from './components/HelloWorld';
 // import App from './App';
@@ -21,9 +22,12 @@ import allReducers from './components/36_redux/reducers';
 
 let store = createStore(allReducers);
 const App = () => {
-    <Provider store={store}>
+    return (
+<Provider store={store}>
         <TaskManagerComponent />
     </Provider>
+    );
+    
 };
 
 AppRegistry.registerComponent('tutorial', () => App);
