@@ -215,3 +215,26 @@ contentContainerStyle={{paddingLeft: 20}}
 36-Redux in React Native #2. Create store, provider, actions of a todo list app
 
 _ Action: must have 'type' and other properties
+_ Reducers: contain function which change 'state'
+
+tasks.push({}): is not correct. Becausue it mutates (changes) the state
+
+=> create a seperate object from current tasks
+
+return [
+	... tasks,
+	{
+		...
+	}
+]
+
+case TOGGLE_ONE_TASK:
+            return tasks.map(task => 
+                (task.taskId === action.taskId)
+                ? {...task, completed: !task.completed}
+                : task
+            )
+// first, iterate the task's array, using 'map;
+// second, clone to a new object, then change
+
+

@@ -16,7 +16,9 @@ import { AppRegistry } from 'react-native';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
-let store = createStore();
+import allReducers from './components/36_redux/reducers';
+
+let store = createStore(allReducers);
 const App = () => {
     <Provider store={store}>
     </Provider>
