@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { AppRegistry } from 'react-native';
+import { StackNavigator } from 'react-navigation';
 // import HelloWorld from './components/HelloWorld';
 // import App from './App';
 // import Robot from './components/Robot'
@@ -13,21 +14,51 @@ import { AppRegistry } from 'react-native';
 // import button from './components/12_handle_button/button';
 // import touchable from './components/13_touchable/touchable'
 // import VerticalScrollView from './components/14_scrollview/VerticalScrollView'
-import TaskManagerComponent from './components/36_redux/components/TaskManagerComponent';
 
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
+// ----36 - Redux---
+// import TaskManagerComponent from './components/36_redux/components/TaskManagerComponent';
+// import { createStore } from 'redux';
+// import { Provider } from 'react-redux';
+// import allReducers from './components/36_redux/reducers';
 
-import allReducers from './components/36_redux/reducers';
+// let store = createStore(allReducers);
 
-let store = createStore(allReducers);
-const App = () => {
-    return (
-        <Provider store={store}>
-            <TaskManagerComponent />
-        </Provider>
-    );
+// const App = () => {
+//     return (
+//         <Provider store={store}>
+//             <TaskManagerComponent />
+//         </Provider>
+//     );
     
-};
+// };
 
-AppRegistry.registerComponent('tutorial', () => App);
+// -------
+
+// ---- React Navigation -------
+import MainComponent from './components/46_react_navigation/components/MainComponent';
+import DetailComponent from './components/46_react_navigation/components/DetailComponent';
+import ThirdComponent from './components/46_react_navigation/components/ThirdComponent';
+import { MainScreen, DetailScreen, ThirdScreen } from './components/46_react_navigation/components/screenNames';
+
+const App = StackNavigator({
+    MainScreen: {
+        screen: MainComponent,
+        navigationOptions: {
+            headerTitle: 'Main',
+        },
+    },
+    DetailScreen: {
+        screen: DetailComponent,
+        navigationOptions: {
+            headerTitle: 'Detail',
+        },
+    },
+    ThirdScreen: {
+        screen: ThirdComponent,
+        navigationOptions: {
+            headerTitle: 'Third'
+        },
+    }
+});
+
+AppRegistry.registerComponent('tutorial', () => MainComponent);
