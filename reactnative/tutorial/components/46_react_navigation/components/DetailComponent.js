@@ -1,11 +1,30 @@
 import React, { Component } from 'react';
 import { Text, View } from 'react-native';
+import Button from 'react-native-button';
+import { ThirdScreen } from './screenNames';
 
 export default class DetailComponent extends Component {
     render() {
+        const { containerStyle, textStyle, buttonContainerStyle, buttonTextStyle } = styles;
+
+        console.log(`this.props.navigation = ${JSON.stringify(this.props.navigation)}`)
+        let paramsFromMainScreen = this.props.navigation.state.params;
+
         return (
-            <View style={styles.containerStyle}>
+            <View style={containerStyle}>
                 <Text style={styles.textStyle}>This is Detail Screen</Text>
+                <Text>Params for Main Screen: </Text>
+                <Text>Movies's name: {paramsFromMainScreen.name}</Text>
+                <Text>Release year: {paramsFromMainScreen.releaseYear}</Text>
+                <Button
+                    containerStyle={buttonContainerStyle}
+                    style={buttonTextStyle}
+                    onPress={() => {
+                        this.props.navigation.navigate(ThirdScreen);
+                    }}
+                >
+                Navigate to Third
+                </Button>
             </View>
         );
     }
@@ -21,6 +40,18 @@ const styles = {
     textStyle: {
         fontWeight: 'bold',
         fontSize: 22,
+        color: 'white'
+    },
+    buttonContainerStyle: {
+        padding: 10,
+        margin: 20,
+        width: 200,
+        height: 45,
+        borderRadius: 10,
+        backgroundColor: 'darkviolet'
+    },
+    buttonTextStyle: {
+        fontSize: 18,
         color: 'white'
     }
 }

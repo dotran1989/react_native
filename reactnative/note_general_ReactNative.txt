@@ -97,4 +97,9 @@ _ Xem co export trung lap hoac chua export Component cho nao khong?
 _ import { Button } from 'react-native-button';
 => import Button from 'react-native-button';
 
+
+12. "isMounted(...) is deprecated in plain javascript react classes
+import { YellowBox } from 'react-native';
+YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
+
 https://github.com/shubhnik/redux-react-navigation-demos

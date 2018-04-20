@@ -35,30 +35,9 @@ import { StackNavigator } from 'react-navigation';
 // -------
 
 // ---- React Navigation -------
-import MainComponent from './components/46_react_navigation/components/MainComponent';
-import DetailComponent from './components/46_react_navigation/components/DetailComponent';
-import ThirdComponent from './components/46_react_navigation/components/ThirdComponent';
-import { MainScreen, DetailScreen, ThirdScreen } from './components/46_react_navigation/components/screenNames';
+import App from './components/46_react_navigation/components/app';
 
-const App = StackNavigator({
-    MainScreen: {
-        screen: MainComponent,
-        navigationOptions: {
-            headerTitle: 'Main',
-        },
-    },
-    DetailScreen: {
-        screen: DetailComponent,
-        navigationOptions: {
-            headerTitle: 'Detail',
-        },
-    },
-    ThirdScreen: {
-        screen: ThirdComponent,
-        navigationOptions: {
-            headerTitle: 'Third'
-        },
-    }
-});
+import { YellowBox } from 'react-native';
+YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
 
-AppRegistry.registerComponent('tutorial', () => MainComponent);
+AppRegistry.registerComponent('tutorial', () => App);

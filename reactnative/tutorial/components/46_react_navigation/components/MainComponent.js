@@ -4,8 +4,16 @@ import { Text, View } from 'react-native';
 import Button from 'react-native-button';
 
 export default class MainComponent extends Component {
+    constructor(...props) {
+        super(...props)
+    }
+
     render() {
         const { containerStyle, textStyle, buttonContainerStyle, buttonTextStyle } = styles;
+        let dataSendToDetail = {
+            name: "Star Wars",
+            releaseYear: 1977
+        };
 
         return (
             <View style={containerStyle}>
@@ -14,10 +22,19 @@ export default class MainComponent extends Component {
                     containerStyle={buttonContainerStyle}
                     style={buttonTextStyle}
                     onPress={() => {
-                        this.props.navigate(DetailScreen);
+                        this.props.navigation.navigate(DetailScreen, dataSendToDetail);
                     }}
                 >
                 Navigate to Detail
+                </Button>
+                <Button
+                    containerStyle={buttonContainerStyle}
+                    style={buttonTextStyle}
+                    onPress={() => {
+                        this.props.navigation.navigate(ThirdScreen);
+                    }}
+                >
+                Navigate to Third
                 </Button>
             </View>
         );
