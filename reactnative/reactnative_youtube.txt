@@ -247,3 +247,28 @@ _ Container will:
 
 _ onClickAdd = a function props which dispatch action
 
+===================================
+47-ReactNavigation#2.Configuring the Header of StackNavigator
+
+static navigationOptions = ({ navigation }) => {
+
+        const { params = {} } = navigation.state;
+
+        console.log(`params: ${JSON.stringify(params)}`);
+
+        let headerTitle = 'Main';
+        let headerTitleStyle = { color: 'red' };
+        let headerRight = (<Button 
+            containerStyle={styles.btnSaveContainerStyle}
+            style={styles.btnSaveStyle}
+            onPress={() => {
+                params.onSave();
+            }}
+            >
+                Save
+            </Button>);
+        let headerBackTitle = 'Back';
+        return { headerTitle, headerTitleStyle, headerRight, headerBackTitle }
+}
+
+headerTintColor

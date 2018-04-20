@@ -4,6 +4,14 @@ import Button from 'react-native-button';
 import { ThirdScreen } from './screenNames';
 
 export default class DetailComponent extends Component {
+    static navigationOptions = ({ navigation }) => {
+        let headerTitle = 'Detail';
+        let headerStyle = { backgroundColor: 'rgb(226,81,65)', borderBottomColor: 'white' };
+        let headerTitleStyle = { color: 'yellow'};
+        let headerTintColor = 'white';
+        return { headerTitle, headerStyle, headerTitleStyle, headerTintColor };
+    };
+
     render() {
         const { containerStyle, textStyle, buttonContainerStyle, buttonTextStyle } = styles;
 

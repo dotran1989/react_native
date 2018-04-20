@@ -8,15 +8,9 @@ import { StackNavigator } from 'react-navigation';
 const RootStack = StackNavigator({
     MainScreen: {
         screen: MainComponent,
-        navigationOptions: {
-            headerTitle: 'Main',
-        },
     },
     DetailScreen: {
         screen: DetailComponent,
-        navigationOptions: {
-            headerTitle: 'Detail',
-        },
     },
     ThirdScreen: {
         screen: ThirdComponent,
