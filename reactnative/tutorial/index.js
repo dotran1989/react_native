@@ -35,9 +35,15 @@ import { StackNavigator } from 'react-navigation';
 // -------
 
 // ---- React Navigation -------
-import App from './components/46_react_navigation/components/app';
+// ----- Direct other page -------
+// import App from './components/46_react_navigation/components/app';
 
-import { YellowBox } from 'react-native';
-YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
+// import { YellowBox } from 'react-native';
+// YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
+
+// ----- Direct other page -------
+
+// ----- Tab Navigator -------
+import App from './components/48_tab_navigator/app'
 
 AppRegistry.registerComponent('tutorial', () => App);
