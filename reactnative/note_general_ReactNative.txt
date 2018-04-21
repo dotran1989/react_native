@@ -1,0 +1,105 @@
+componentDidMount()
+componentWillMount()
+
+Redux
+
+Provider
+Reducer
+connect
+mapStateToProps
+
+
+// ------------
+
+1. Funtions are not valued as a React child.
+
+this.renderAlbums -> this.renderAlbums()
+this.renderDescription -> this.renderDescription()
+
+2. Unable conntect remote debugger
+
+https://stackoverflow.com/questions/40898934/unable-to-connect-with-remote-debugger
+http://10.0.2.2:8081/debugger-ui
+
+3. Not Yoga Node -> must have tag <parent> contains text
+
+_ <Text>{value}</Text>
+
+4. You likely forgot to export your component -> if you grab all components into index.js
+
+_ export default <Component>
+=> export {<Component>}
+
+5. EVENT
+
+<Button onPress={() => firebase.auth().signOut()}>Log Out</Button>
+
+<Button onPress={this.onButtonPress.bind(this)}>
+    Log in
+</Button>
+
+<TouchableWithoutFeedback
+                onPress={() => this.props.selectLibrary(this.props.item.id)}
+            >
+
+6. Set and get this STATE
+
+this.setState({ loggedIn: true });
+this.state.loggedIn
+
+onLoginSuccess() {
+    this.setState({
+        email: '',
+        password: '',
+        loading: false,
+        error: ''
+    });
+}
+
+this.onLoginSuccess.bind(this)
+
+7. TEXT INPUT get value and set to STATE
+
+_ Set value to state
+<Input
+    placeholder="user@gmail.com"
+    label="Email"
+    value={this.state.email}
+    onChangeText={email => this.setState({ email })}
+/>
+
+_ Get value
+const { email, password } = this.state;
+
+8. VÒNG ĐỜI CỦA Component
+
+https://viblo.asia/p/vong-doi-cua-component-trong-react-gGJ59XaJlX2
+https://www.businesscard.vn/blog/vong-doi-cua-component-trong-react/
+
+Redux
+FlatList
+
+9. Could not install the app on the device, read the error above for details. -> tắt và mở lại cmd.
+
+10. Mở emulator
+
+_ List avd name
+cd C:\Users\cuong.duong\AppData\Local\Android\Sdk\tools\bin -> avdmanager list avd
+
+_ cd.. and then type:
+C:\Users\cuong.duong\AppData\Local\Android\Sdk\tools>emulator -avd Nexus_5X_API_26
+
+_ Path avd
+C:\Users\cuong.duong\.android\avd
+
+11. *** Error invariant violation
+_ Xem co export trung lap hoac chua export Component cho nao khong?
+_ import { Button } from 'react-native-button';
+=> import Button from 'react-native-button';
+
+
+12. "isMounted(...) is deprecated in plain javascript react classes
+import { YellowBox } from 'react-native';
+YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
+
+https://github.com/shubhnik/redux-react-navigation-demos

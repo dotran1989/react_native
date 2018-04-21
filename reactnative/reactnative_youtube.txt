@@ -209,9 +209,8 @@ minimumZoomScale={0.2}
 
 _ Add style:
 contentContainerStyle={{paddingLeft: 20}}
-
 ===================================
-14-Horizontal ScrollView
+15-Horizontal ScrollView
 <ScrollView
                 horizontal={true}
                 pagingEnabled={true}
@@ -243,3 +242,64 @@ contentContainerStyle={{paddingLeft: 20}}
         console.log(`scrolled to page = ${event.nativeEvent.position}`)
     }}
 
+===================================
+36-Redux in React Native #2. Create store, provider, actions of a todo list app
+
+_ Action: must have 'type' and other properties
+_ Reducers: contain function which change 'state'
+
+tasks.push({}): is not correct. Becausue it mutates (changes) the state
+
+=> create a seperate object from current tasks
+
+return [
+	... tasks,
+	{
+		...
+	}
+]
+
+case TOGGLE_ONE_TASK:
+            return tasks.map(task => 
+                (task.taskId === action.taskId)
+                ? {...task, completed: !task.completed}
+                : task
+            )
+// first, iterate the task's array, using 'map;
+// second, clone to a new object, then change
+
+===================================
+39-Redux in React Native #5. Add containers to the todo list Redux app
+
+_ Container will:
++ Help component dispatch actions
++ convert component's state => prop
++ convert component's dispatch => prop
+
+_ onClickAdd = a function props which dispatch action
+
+===================================
+47-ReactNavigation#2.Configuring the Header of StackNavigator
+
+static navigationOptions = ({ navigation }) => {
+
+        const { params = {} } = navigation.state;
+
+        console.log(`params: ${JSON.stringify(params)}`);
+
+        let headerTitle = 'Main';
+        let headerTitleStyle = { color: 'red' };
+        let headerRight = (<Button 
+            containerStyle={styles.btnSaveContainerStyle}
+            style={styles.btnSaveStyle}
+            onPress={() => {
+                params.onSave();
+            }}
+            >
+                Save
+            </Button>);
+        let headerBackTitle = 'Back';
+        return { headerTitle, headerTitleStyle, headerRight, headerBackTitle }
+}
+
+headerTintColor

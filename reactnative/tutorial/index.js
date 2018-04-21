@@ -1,4 +1,6 @@
+import React, { Component } from 'react';
 import { AppRegistry } from 'react-native';
+import { StackNavigator } from 'react-navigation';
 // import HelloWorld from './components/HelloWorld';
 // import App from './App';
 // import Robot from './components/Robot'
@@ -13,6 +15,37 @@ import { AppRegistry } from 'react-native';
 // import touchable from './components/13_touchable/touchable'
 // import VerticalScrollView from './components/14_scrollview/VerticalScrollView'
 // import HorizontalScrollView from './components/14_scrollview/HorizontalScrollView'
-import ViewPagerExample from './components/14_scrollview/ViewPagerExample'
+// import ViewPagerExample from './components/14_scrollview/ViewPagerExample'
 
-AppRegistry.registerComponent('tutorial', () => ViewPagerExample);
+// ----36 - Redux---
+// import TaskManagerComponent from './components/36_redux/components/TaskManagerComponent';
+// import { createStore } from 'redux';
+// import { Provider } from 'react-redux';
+// import allReducers from './components/36_redux/reducers';
+
+// let store = createStore(allReducers);
+
+// const App = () => {
+//     return (
+//         <Provider store={store}>
+//             <TaskManagerComponent />
+//         </Provider>
+//     );
+    
+// };
+
+// -------
+
+// ---- React Navigation -------
+// ----- Direct other page -------
+// import App from './components/46_react_navigation/components/app';
+
+// import { YellowBox } from 'react-native';
+// YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
+
+// ----- Direct other page -------
+
+// ----- Tab Navigator -------
+import App from './components/48_tab_navigator/app'
+
+AppRegistry.registerComponent('tutorial', () => App);

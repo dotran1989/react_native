@@ -1,0 +1,245 @@
+INSTAL YARN PACKAGE
+
+$ npm install -g create-react-native-app
+$ create-react-native-app <project_name>
+
+// install yarn package from download: https://yarnpkg.com/lang/en/docs/install/
+
+$ yarn global add yarn-install
+
+OR
+
+npm install yarn -global
+C:\Users\QUOC CUONG\AppData\Roaming\npm\yarn -> C:\Users\QUOC CUONG\AppData\Roam
+ing\npm\node_modules\yarn\bin\yarn.js
+
+===================================
+$ yarn android
+
+===================================
+Babel command line interface and preset flow
+
+$ yarn add --dev babel-cli babel-preset-flow
+
+$ nano .babelrc
+
+$ yarn add --dev flow-bin
+
+$ yarn run flow
+
+Wrong version of Flow. The config specifies version ^0.67.0 but this is version
+0.69.0
+Could not start Flow server!
+
+$ yarn add --dev flow-bin@0.67.0
+
+=> RESULT:
+$ E:\learning\reactnative\tutorial\node_modules\.bin\flow
+Launching Flow server for E:\learning\reactnative\tutorial
+Spawned flow server (pid=8232)
+Logs will go to C:\Users\QUOCCU~1\AppData\Local\Temp\flow\EzCzBlearningzBtivezBtutorial.log
+Monitor logs will go to C:\Users\QUOCCU~1\AppData\Local\Temp\flow\EzCzBleBreactnativezBtutorial.monitor_log
+←[0KNo errors!t. Server is handling a request (collating errors): |%)): |
+Done in 34.10s.
+
+===================================
+Video 3.
+
+export = public
+default = make this class "default" when you import from other files
+
+_ export default class HelloWorld extends Component { // public component
+
+JSX = javascript extension
+<Text>{ hello }</Text>
+
+let = cannot re-assign to other type but can change value
+
+===================================
+04-Customize React Native components using Props
+
+<Image source={ {uri:"link_image"} }></Image>
+_ "source" = props of Image = "public property" of Image component
+
+_ add 'width' and 'height' for show image
+_ 'var': you can change the value to any type.
+
+// object
+var imageSource = { 
+            uri:"https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/HONDA_ASIMO.jpg/200px-HONDA_ASIMO.jpg" 
+};
+
+// string
+imageSource = 'abc';
+
+_ 'const': cannot change value
+
+_ class Greeting extends Component { // private component
+
+_ 'props': public property
+
+Props means "public property" in a React Native class. 
+Developer can set props for a Component, but inside a Component, a props is read-only. Only change outside the Component.
+
+===================================
+05-State in React Native Component
+
+_ this.state: private property, can change value. You can assign state only in constructor.
+Use 'setState' in other place.
+
+_ 'undefined is not an object (evaluating 'func.apply')' -> call variable not funtion.
+
+var taskToDo = () => {...}
+setInterval(taskToDo(), 1000)
+-> setInterval(taskToDo, 1000)
+
+===================================
+06-Style a React Native component with StyleSheet
+
+_ Array of styles: priority for last index
+<Text style= { [styles.secondStyle, styles.textStyle] }>Hello!</Text>
+
+===================================
+07-Customize width and height props with Fixed and Flex dimensions
+
+_ 'flex': flexible, a positive number
+
+_ Column: top, center, bottom
+_ Row: start, center, end
+
++ 'flexDirection': row
+_ justifyContent -> Row: start, center, end
+_ alignItems -> column: top, center, bottom
+
++ 'flexDirection': column
+_ justifyContent -> column: top, center, bottom
+_ alignItems -> Row: start, center, end
+
+===================================
+10-TextInput#1.Create a basic TextInput with Email and Password
+
+_ render -> return (...);
+_ arrow function -> return {...};
+
+// ----
+onChangeText={
+    (text) => {
+		// this.state: not allow
+        this.setState(
+            (previousState) => {
+                return {
+                    typeText: text
+                 };
+            }
+         );
+    }
+}
+				
+// ---- babel
+(function (text) {
+    // this.state: not allow
+    undefined.setState(function (previousState) {
+        return {
+            typeText: text
+        };
+    });
+});
+
+// ----	myself
+function(text) {
+	this.setState(previousState, text)
+}
+
+setState(previousState, text) {
+	return this.typeText = text;
+}
+
+===================================
+11-TextInput#2. Working with multiline TextInput and Keyboard
+
+_ multiline={true}
+_ editable={true}
+
+_ Add listener keyboard:
+
+componentWillMount() {
+    this.keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', () => {
+        this.setState(() => {
+            return {typeText: 'keyboard is shown'}
+        })
+    });
+    this.keyboardHideShowListener = Keyboard.addListener('keyboardDidHide', () => {
+        this.setState(() => {
+            return {typeText: 'keyboard is hide'}
+        })
+    });
+}
+
+componentWillUnmount() {
+    this.keyboardDidShowListener.remove();
+	this.keyboardHideShowListener.remove();
+}
+
+===================================
+12-Touches and gestures#1. Display and handle a basic React Native Button
+
+_ Install button
+$ npm install react-native-button --save
+
+*** Error:
+_ Command run-android unrecognized. Did you mean to run this inside a react-native project?
+=> I just ran "yarn" with no arguments and it fixed it.
+
+===================================
+13-Touches#2.TouchableHighlight, TouchableNativeFeedback,TouchableOpacity,TouchableWithoutFeedback
+
+_ TouchableHighlight: highlight when touched
+
+===================================
+14-ScrollView#1.Draw a basic ScrollView with mixed Components
+
+_ Dismiss keyboard in TextInput when drag scrollview:
+
+keyboardDismissMode='on-drag'
+
+_ Scale: only in IOS
+
+maximumZoomScale={2}
+minimumZoomScale={0.2}
+
+_ Add style:
+contentContainerStyle={{paddingLeft: 20}}
+
+===================================
+14-Horizontal ScrollView
+<ScrollView
+                horizontal={true}
+                pagingEnabled={true}
+                showsHorizontalScrollIndicator={true}
+                onMomentumScrollBegin={() => {
+                    //alert('Begin scrolling');
+                }}
+                onMomentumScrollEnd={() => {
+                    //alert('End scrolling');
+                }}
+                onScroll={(event) => {
+                    let logData = `Scrolled to x = ${event.nativeEvent.contentOffset.x}, y = ${event.nativeEvent.contentOffset.y}`;
+                    console.log(logData);
+                }}
+                scrollEventThrottle={10} // get updating Cordinate each 10 miliseconds
+            >
+
+===================================
+16-ScrollView#3.Create ScrollView with ViewPagerAndroid in React Native
+
+	initialPage={0}
+    onPageScroll={(event) => {
+        //console.log(`offset = ${event.nativeEvent.offset}`)
+    }}
+    onPageScrollStateChanged={(state) => {
+        //console.log(`scrolling state = ${state}`) // dragging, settling and iddle
+    }}
+    onPageSelected={(event) => {
+        console.log(`scrolled to page = ${event.nativeEvent.position}`)
+    }}
+
