@@ -210,5 +210,36 @@ minimumZoomScale={0.2}
 _ Add style:
 contentContainerStyle={{paddingLeft: 20}}
 
-get updating Cordinate each 10 miliseconds
+===================================
+14-Horizontal ScrollView
+<ScrollView
+                horizontal={true}
+                pagingEnabled={true}
+                showsHorizontalScrollIndicator={true}
+                onMomentumScrollBegin={() => {
+                    //alert('Begin scrolling');
+                }}
+                onMomentumScrollEnd={() => {
+                    //alert('End scrolling');
+                }}
+                onScroll={(event) => {
+                    let logData = `Scrolled to x = ${event.nativeEvent.contentOffset.x}, y = ${event.nativeEvent.contentOffset.y}`;
+                    console.log(logData);
+                }}
+                scrollEventThrottle={10} // get updating Cordinate each 10 miliseconds
+            >
+
+===================================
+16-ScrollView#3.Create ScrollView with ViewPagerAndroid in React Native
+
+	initialPage={0}
+    onPageScroll={(event) => {
+        //console.log(`offset = ${event.nativeEvent.offset}`)
+    }}
+    onPageScrollStateChanged={(state) => {
+        //console.log(`scrolling state = ${state}`) // dragging, settling and iddle
+    }}
+    onPageSelected={(event) => {
+        console.log(`scrolled to page = ${event.nativeEvent.position}`)
+    }}
 

@@ -12,6 +12,7 @@ import { AppRegistry } from 'react-native';
 // import button from './components/12_handle_button/button';
 // import touchable from './components/13_touchable/touchable'
 // import VerticalScrollView from './components/14_scrollview/VerticalScrollView'
-import HorizontalScrollView from './components/14_scrollview/HorizontalScrollView'
+// import HorizontalScrollView from './components/14_scrollview/HorizontalScrollView'
+import ViewPagerExample from './components/14_scrollview/ViewPagerExample'
 
-AppRegistry.registerComponent('tutorial', () => HorizontalScrollView);
+AppRegistry.registerComponent('tutorial', () => ViewPagerExample);
