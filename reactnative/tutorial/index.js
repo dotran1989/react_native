@@ -46,6 +46,9 @@ import { StackNavigator } from 'react-navigation';
 // ----- Direct other page -------
 
 // ----- Tab Navigator -------
-import App from './components/48_tab_navigator/app'
+// import App from './components/48_tab_navigator/app'
+
+// ----- Drawer Navigator -------
+import App from './components/49_drawer_navigator/app';
 
 AppRegistry.registerComponent('tutorial', () => App);

@@ -303,3 +303,10 @@ static navigationOptions = ({ navigation }) => {
 }
 
 headerTintColor
+
+===================================
+49-ReactNavigation#4.Set up a screen with a drawer navigation using DrawerNavigator
+
+<HeaderComponent {...this.props} />
+
+=> bring all HomeComponent's props to HeaderComponent's props

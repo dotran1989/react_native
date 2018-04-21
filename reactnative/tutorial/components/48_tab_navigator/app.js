@@ -33,7 +33,7 @@ let tabNavigatorConfig = {
         },
         showLabel: true
     },
-    order: [Cloud, Info, Home]
+    // order: [Cloud, Info, Home]
 };
 
 const RootTab = TabNavigator(routeConfigs, tabNavigatorConfig);
