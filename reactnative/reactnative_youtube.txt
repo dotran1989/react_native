@@ -321,3 +321,50 @@ _ props:
 FlastListItem's props:
 + item
 + index
+
+===================================
+19-FlatList#3.Trượt để xóa một Item trong FlatList
+
+_ import Swipeout from 'react-native-swipeout';
+
+_ Declare swipe settings:
+
+const swipeSettings = {
+            autoClose: true,
+            onClose: (secId, rowId, direction) => {
+
+            },
+            onOpen: (secId, rowId, direction) => {
+
+            },
+            right: [
+                {
+                    onPress: () => {
+                        Alert.alert(
+                            'Alert',
+                            'Are you sure you want to delete?',
+                            [
+                                {text: 'No', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
+                                {text: 'Yes', onPress: () => {
+                                    flatListData.splice(this.props.index, 1);
+                                }},
+                            ],
+                            { cancelable: true }
+                        );
+                    },
+                    Text: 'Delete', type: 'delete'
+                }
+            ],
+            rowId: this.props.index,
+            sectionId: 1
+        };
+
+_ <Swipeout {...swipeSettings}>
+
+_ Delete item in flatList:
+flatListData.splice(this.props.index, 1);
+
+
+
+
+
