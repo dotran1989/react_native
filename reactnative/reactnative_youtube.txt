@@ -310,3 +310,14 @@ headerTintColor
 <HeaderComponent {...this.props} />
 
 => bring all HomeComponent's props to HeaderComponent's props
+
+===================================
+17-FlatList
+
+_ props:
++ data
++ renderItem
+
+FlastListItem's props:
++ item
++ index
