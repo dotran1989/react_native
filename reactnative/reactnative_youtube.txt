@@ -371,4 +371,25 @@ _ Modal's props:
 + ref
 + parentFlastList
 
+_ Undefined is not an object ('this.refs.addModal') => "this" is NOT BasicFlatList's object
+
+_ In constructor of BasicFlatList:
+
+this._onPressAdd = this._onPressAdd.bind(this); // bind "this" to BasicFlatList's object
+
+_ TextInput
+
+onChangeText={(text) => this.setState({ newFoodName: text })}
+
+_ Generate key random:
+
+generateKey = (numberOfCharacters) => {
+    return require('random-string')({length: numberOfCharacters});
+}
+
+_ New:
++ 'ref' to open, close Modal, refresh FlatList.
++ bind(this)
++ random-string
++ scrollToEnd
 

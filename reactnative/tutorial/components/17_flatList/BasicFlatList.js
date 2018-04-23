@@ -90,20 +90,23 @@ export default class BasicFlatList extends Component {
         this.state = ({
             deletedRowKey: null
         });
+        this._onPressAdd = this._onPressAdd.bind(this); // bind 'this' to BasicFlatList's object
     }
 
     // refresh by changing a state. When state change, automatically re-render Component FLastList.
-    refreshFlatList = (deleteKey) => {
+    refreshFlatList = (activeKey) => {
         this.setState((prevState) => {
             return {
-                deletedRowKey: deleteKey
+                deletedRowKey: activeKey
             };
         });
+        // automatically scroll to end
+        this.refs.flatlist.scrollToEnd();
     };
     
     _onPressAdd() {
         // alert('You add item');
-        this.refs.addModal.showAddModal();
+        this.refs.addModal.showAddModal(); // error 'this.refs' is undefined -> 'this' is not BasicFlatList's object
     }
 
     // parentFlatList={this}: BasicFlatList's object
@@ -123,6 +126,7 @@ export default class BasicFlatList extends Component {
                     </TouchableHighlight>
                 </View>
                 <FlatList
+                    ref={"flatlist"}
                     data={flatListData}
                     renderItem={({ item, index }) => {
                         // console.log(`item: ${JSON.stringify(item)}, index = ${index}`);

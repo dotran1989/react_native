@@ -40,8 +40,8 @@ import { StackNavigator } from 'react-navigation';
 // ----- Direct other page -------
 // import App from './components/46_react_navigation/components/app';
 
-// import { YellowBox } from 'react-native';
-// YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
+import { YellowBox } from 'react-native';
+YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
 
 // ----- Direct other page -------
 
