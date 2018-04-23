@@ -393,3 +393,24 @@ _ New:
 + random-string
 + scrollToEnd
 
+===================================
+22-FlatList#6.Present Modal and update an existing FlatList's Item
+
+_ Update FlatListItem automatically.
+
+refreshFlatListItem() {
+        this.setState((prevState) => {
+            return {
+                numberOfRefresh: prevState.numberOfRefresh + 1
+            };
+        });
+}
+
+* this.setState has arrow function -> return
+
+_ this.setState({ activeRowKey: null }); -> set ojbect do not 'return'
+
+_ Find index of item is updated:
+
+var foundIndex = flatListData.findIndex(item => this.state.key == item.key);
+

@@ -3,13 +3,23 @@ import { FlatList, Text, View, Image, Alert, Platform, TouchableHighlight } from
 import flatListData from './data/flatListData';
 import Swipeout from 'react-native-swipeout';
 import AddModal from './AddModal';
+import EditModal from './EditModal';
 
 class FlastListItem extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            activeRowKey: null // save your key of deleting object
+            activeRowKey: null, // save your key of deleting object
+            numberOfRefresh: 0
         };
+    }
+
+    refreshFlatListItem() {
+        this.setState((prevState) => {
+            return {
+                numberOfRefresh: prevState.numberOfRefresh + 1
+            };
+        });
     }
 
     render() {
@@ -17,12 +27,21 @@ class FlastListItem extends Component {
         const swipeSettings = {
             autoClose: true,
             onClose: (secId, rowId, direction) => {
-
+                if (this.state.activeRowKey != null) {
+                    this.setState({ activeRowKey: null });
+                }
             },
             onOpen: (secId, rowId, direction) => {
                 this.setState({ activeRowKey: this.props.item.key });
             },
             right: [
+                {
+                    onPress: () => {
+                        // alert('Update');
+                        this.props.parentFlatList.refs.editModal.showEditModal(flatListData[this.props.index], this);
+                    },
+                    Text: 'Edit', type: 'primary'
+                },
                 {
                     onPress: () => {
                         const deletingRow = this.state.activeRowKey;
@@ -140,6 +159,9 @@ export default class BasicFlatList extends Component {
                 <AddModal ref={'addModal'} parentFlatList={this}>
 
                 </AddModal>
+                <EditModal ref={'editModal'} parentFlatList={this}>
+
+                </EditModal>
             </View>
         );
     }
