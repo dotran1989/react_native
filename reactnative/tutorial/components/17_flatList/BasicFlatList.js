@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { FlatList, Text, View, Image, Alert, Platform, TouchableHighlight } from 'react-native';
 import flatListData from './data/flatListData';
 import Swipeout from 'react-native-swipeout';
+import AddModal from './AddModal';
 
 class FlastListItem extends Component {
     constructor(props) {
@@ -101,9 +102,11 @@ export default class BasicFlatList extends Component {
     };
     
     _onPressAdd() {
-        alert('You add item');
+        // alert('You add item');
+        this.refs.addModal.showAddModal();
     }
 
+    // parentFlatList={this}: BasicFlatList's object
     render() {
         return (
             <View style={{ flex: 1, marginTop: Platform.OS === 'ios' ? 34 : 0 }}>
@@ -130,6 +133,9 @@ export default class BasicFlatList extends Component {
                         );
                     }}>
                 </FlatList>
+                <AddModal ref={'addModal'} parentFlatList={this}>
+
+                </AddModal>
             </View>
         );
     }

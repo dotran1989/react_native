@@ -364,7 +364,11 @@ _ <Swipeout {...swipeSettings}>
 _ Delete item in flatList:
 flatListData.splice(this.props.index, 1);
 
+===================================
+21-FlatList#5.Present Modal and insert Data to existing FLatList
 
-
+_ Modal's props:
++ ref
++ parentFlastList
 
 
