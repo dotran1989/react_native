@@ -55,6 +55,8 @@ YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTIm
 // import BasicFlatList from './components/17_flatList/BasicFlatList'
 
 // ----- Horizontal FlatList -------
-import HorizontalFlatList from './components/23_horizontal_flatlist/HorizontalFlatList';
+// import HorizontalFlatList from './components/23_horizontal_flatlist/HorizontalFlatList';
 
-AppRegistry.registerComponent('tutorial', () => HorizontalFlatList);
+import App from './components/100_react_navigation_redux/app';
+
+AppRegistry.registerComponent('tutorial', () => App);
