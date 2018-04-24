@@ -51,6 +51,10 @@ YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTIm
 // ----- Drawer Navigator -------
 // import App from './components/49_drawer_navigator/app';
 
-import BasicFlatList from './components/17_flatList/BasicFlatList'
+// ----- FlatList -------
+// import BasicFlatList from './components/17_flatList/BasicFlatList'
 
-AppRegistry.registerComponent('tutorial', () => BasicFlatList);
+// ----- Horizontal FlatList -------
+import HorizontalFlatList from './components/23_horizontal_flatlist/HorizontalFlatList';
+
+AppRegistry.registerComponent('tutorial', () => HorizontalFlatList);
