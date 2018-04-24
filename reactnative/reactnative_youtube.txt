@@ -414,3 +414,5 @@ _ Find index of item is updated:
 
 var foundIndex = flatListData.findIndex(item => this.state.key == item.key);
 
+
+https://hackernoon.com/a-comprehensive-guide-for-integrating-react-navigation-with-redux-including-authentication-flow-cb7b90611adf
