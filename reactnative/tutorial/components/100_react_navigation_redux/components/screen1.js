@@ -32,7 +32,7 @@ class Screen1 extends Component {
                 <View style={{ height: 100, flexDirection: 'row' }}>
                     <TouchableOpacity
                         style={touchStyle}
-                        onPress={() => incrementAction()}>
+                        onPress={this.props.incrementAction}>
                         <Text style={textStyle}>
                             INCREMENT
                         </Text>
