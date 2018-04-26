@@ -3,7 +3,9 @@ import { Text, View, TouchableOpacity } from 'react-native';
 import { NavigationActions } from 'react-navigation';
 import { connect } from 'react-redux';
 
-export default class Screen1 extends Component {
+import { incrementAction, decrementAction } from '../actions/actionCreator';
+
+class Screen1 extends Component {
     static navigationOptions = {
         title: "Screen 1"
     };
@@ -19,10 +21,33 @@ export default class Screen1 extends Component {
     }
 
     render() {
+
+        const { containerStyle, btnNavigateStyle, touchStyle, textStyle } = styles;
+
+        const { counterCount, incrementAction, decrementAction } = this.props;
+
         return (
-            <View>
+            <View style={containerStyle}>
+                <Text>{counterCount}</Text>
+                <View style={{ height: 100, flexDirection: 'row' }}>
+                    <TouchableOpacity
+                        style={touchStyle}
+                        onPress={() => incrementAction()}>
+                        <Text style={textStyle}>
+                            INCREMENT
+                        </Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        style={touchStyle}
+                        onPress={() => decrementAction()}
+                    >
+                        <Text style={textStyle}>
+                            DECREMENT
+                        </Text>
+                    </TouchableOpacity>
+                </View>
                 <TouchableOpacity
-                    style={styles.btnStyle}
+                    style={btnNavigateStyle}
                     onPress={this._navigate}
                 >
                     <Text>Screen 2</Text>
@@ -34,12 +59,44 @@ export default class Screen1 extends Component {
 }
 
 const styles = {
-    btnStyle: {
+    containerStyle: {
+        flex: 1,
+        backgroundColor: 'yellowgreen',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    touchStyle: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#4286f4'
+    },
+    textStyle: {
+        textDecorationLine: 'underline',
+        fontWeight: '600'
+    },
+    btnNavigateStyle: {
         paddingVertical: 15,
         paddingHorizontal: 40,
         backgroundColor: "indigo"
     }
-}
+};
+
+const mapStateToProps = state => {
+    console.log(`screen 1 - state: + ${JSON.stringify(state)}`);
+    return {
+        counterCount: state.CounterReducer.counter
+    };
+};
+
+const mapDispatchToProps = {
+    incrementAction,
+    decrementAction
+};
+
+const Screen1View = connect(mapStateToProps, mapDispatchToProps)(Screen1);
+
+export default Screen1View;
 
 // navigateToscreen2 will look like this:
       /*
@@ -51,3 +108,21 @@ const styles = {
         }
        }
       */
+
+// State of counter
+/* {  
+    "CounterReducer":{  
+       "counter":0
+    },
+    "NavigationReducer":{  
+       "key":"StackRouterRoot",
+       "isTransitioning":false,
+       "index":0,
+       "routes":[  
+          {  
+             "key":"id-1524712410961-0",
+             "routeName":"screen1"
+          }
+       ]
+    }
+ } */

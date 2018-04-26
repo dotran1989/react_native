@@ -2,11 +2,11 @@ import AppNavigator from '../navigation/navigationStack';
 
 // perform this action to navigate screen 1
 const actionForScreen1 = AppNavigator.router.getActionForPathAndParams("screen1");
-console.log(`actionForScreen1: ${JSON.stringify(actionForScreen1)}`);
+// console.log(`actionForScreen1: ${JSON.stringify(actionForScreen1)}`);
 
 // state for this action
 const initialState = AppNavigator.router.getStateForAction(actionForScreen1);
-console.log(`initialState: ${JSON.stringify(initialState)}`);
+// console.log(`initialState: ${JSON.stringify(initialState)}`);
 
 // get new state base on action and current state
 const navigationReducer = (state = initialState, action) => {
@@ -14,7 +14,7 @@ const navigationReducer = (state = initialState, action) => {
     // **action**  will be of type: {"type": "Navigation/NAVIGATE", "routeName": SOME_ROUTE}
 
     const newState = AppNavigator.router.getStateForAction(action, state);
-    console.log(`newState: ${JSON.stringify(newState)}`);
+    // console.log(`newState: ${JSON.stringify(newState)}`);
     return newState || state;
 };
 

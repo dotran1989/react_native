@@ -3,9 +3,9 @@ import Screen1 from '../components/screen1';
 import Screen2 from '../components/screen2';
 
 const navigator = StackNavigator({
-    login: {
-        screen: Login
-    },
+    // login: {
+    //     screen: Login
+    // },
     screen1: {
         screen: Screen1
     },
