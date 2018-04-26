@@ -414,5 +414,23 @@ _ Find index of item is updated:
 
 var foundIndex = flatListData.findIndex(item => this.state.key == item.key);
 
+===================================
+25-LifeCycle of a Component in React Native
+
+_ Call one time:
+
++ constructor
++ componentWillMount
++ componentDidMount
++ componentWillUnmount
+
+_ Call when 'state' changed:
+
++ shouldComponentUpdate -> return 'true'
++ componentWillUpdate
++ render
++ componentDidUpdate
+
+
 
 https://hackernoon.com/a-comprehensive-guide-for-integrating-react-navigation-with-redux-including-authentication-flow-cb7b90611adf
