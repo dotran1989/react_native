@@ -18,21 +18,20 @@ import { StackNavigator } from 'react-navigation';
 // import ViewPagerExample from './components/14_scrollview/ViewPagerExample'
 
 // ----36 - Redux---
-// import TaskManagerComponent from './components/36_redux/components/TaskManagerComponent';
-// import { createStore } from 'redux';
-// import { Provider } from 'react-redux';
-// import allReducers from './components/36_redux/reducers';
+import TaskManagerComponent from './components/36_redux/components/TaskManagerComponent';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import allReducers from './components/36_redux/reducers';
 
-// let store = createStore(allReducers);
+let store = createStore(allReducers);
 
-// const App = () => {
-//     return (
-//         <Provider store={store}>
-//             <TaskManagerComponent />
-//         </Provider>
-//     );
-    
-// };
+const App = () => {
+    return (
+        <Provider store={store}>
+            <TaskManagerComponent />
+        </Provider>
+    );
+};
 
 // -------
 
@@ -40,8 +39,8 @@ import { StackNavigator } from 'react-navigation';
 // ----- Direct other page -------
 // import App from './components/46_react_navigation/components/app';
 
-import { YellowBox } from 'react-native';
-YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
+// import { YellowBox } from 'react-native';
+// YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
 
 // ----- Direct other page -------
 
@@ -58,6 +57,6 @@ YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTIm
 // import HorizontalFlatList from './components/23_horizontal_flatlist/HorizontalFlatList';
 
 // import App from './components/100_react_navigation_redux/app';
-import LifeCycleComponent from './components/25_lifecycle/LifeCycleComponent';
+// import LifeCycleComponent from './components/25_lifecycle/LifeCycleComponent';
 
-AppRegistry.registerComponent('tutorial', () => LifeCycleComponent);
+AppRegistry.registerComponent('tutorial', () => App);

@@ -4,16 +4,37 @@ import { AppRegistry, FlatList,
     TouchableOpacity,
     RefreshControl, TextInput } from 'react-native';
 
-export default class TaskItemComponent extends Component {
+import { connect } from 'react-redux';
+import * as actions from '../actions';
+class TaskItemComponent extends Component {
+    constructor(props) {
+        super(props);
+        this.state= {
+            numberOfRefresh: 0
+        };
+    };
+
+    refreshListItem() {
+        this.setState(prevState => {
+            return {
+                numberOfRefresh: prevState.numberOfRefresh + 1
+            }
+        });
+    }
+
     render() {
-        //alert("item:" + this.props.taskName);
+        console.log(`render - item: + ${this.props.taskName} + ' ' + ${this.props.completed}`);
         return (
-            <View style={{ flex: 1, backgroundColor: 'red' }}>
-                <TouchableOpacity style={styles.touchableStyle}
+            <View style={{ flex: 1, backgroundColor: this.props.completed == true ? 'green' : 'red' }}>
+                <TouchableOpacity
                     onPress={() => {
-                        
-                    }}>
-                    <Text style={{ margin: 20, color: this.props.completed == true ? 'darkgreen' : 'black' }}>
+                        // alert(`item: ` + this.props.taskName);
+                        this.props.toggleTask(this.props.id)
+                        this.props.parentFlatList.refreshFlatList(this.props.id)
+                        // this.refreshListItem()
+                    }}
+                >
+                    <Text style={{ margin: 20, color: this.props.completed == true ? 'white' : 'black' }}>
                         {this.props.taskName}
                     </Text>
                 </TouchableOpacity>
@@ -31,3 +52,5 @@ const styles = {
         right: 0
     }
 }
+
+export default connect(null, actions)(TaskItemComponent);

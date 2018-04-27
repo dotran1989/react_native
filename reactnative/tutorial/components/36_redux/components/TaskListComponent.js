@@ -8,6 +8,19 @@ import { connect } from 'react-redux';
 import { List, ListItem } from 'react-native-elements';
 
 class TaskListComponent extends Component {
+    constructor(props) {
+        super(props);
+        this.state = ({
+            itemIdClicked: null
+        });
+    }
+
+    refreshFlatList(itemId) {
+        console.log(`refreshFlatList:  ${itemId}`);
+        this.setState((prevState) => {
+            itemIdClicked: itemId
+        });
+    }
 
     keyExtractor = (item) => item.taskName;
 
@@ -21,26 +34,31 @@ class TaskListComponent extends Component {
 
     render() {
         // alert("tasks: " + (this.props.tasks instanceof Array) ? 'true' : 'false');
-        alert(`tasks: ${JSON.stringify(this.props.tasks)}`);
+        console.log(`tasks: ${JSON.stringify(this.props.tasks)}`);
         return (
-            // <FlatList
-            //     data={this.props.tasks}
-            //     renderItem={({ item, index }) => {
-            //         <TaskItemComponent
-            //             id={item.taskId}
-            //             taskName={item.taskName}
-            //         />
-            //     }}
-            //     keyExtractor={(item, index) => item.taskName}
-            //     >
-            // </FlatList>
-            <List>
-                <FlatList
-                    data={this.props.tasks}
-                    renderItem={this.renderItem}
-                    keyExtractor={this.keyExtractor}
-                />
-            </List>
+            <FlatList
+                data={this.props.tasks}
+                renderItem={({ item, index }) => {
+                    return (
+                        <TaskItemComponent
+                            id={item.taskId}
+                            taskName={item.taskName}
+                            parentFlatList={this}
+                            completed={item.completed}
+                        >
+                        </TaskItemComponent>
+                    );
+                }}
+                keyExtractor={(item, index) => item.taskId.toString()}
+                >
+            </FlatList>
+            // <List>
+            //     <FlatList
+            //         data={this.props.tasks}
+            //         renderItem={this.renderItem}
+            //         keyExtractor={this.keyExtractor}
+            //     />
+            // </List>
         );
     }
 };
@@ -53,3 +71,16 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps)(TaskListComponent);
+
+/* tasks:[  
+    {  
+       "taskId":0,
+       "taskName":"aaa",
+       "completed":false
+    },
+    {  
+       "taskId":1,
+       "taskName":"bbb",
+       "completed":false
+    }
+ ] */

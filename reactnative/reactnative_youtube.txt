@@ -268,6 +268,19 @@ case TOGGLE_ONE_TASK:
 // first, iterate the task's array, using 'map;
 // second, clone to a new object, then change
 
+
+*** Warning: Failed child context type: Invalid child context `virtualizedCell.cellKey` of type `number` supplied to `CellRenderer`, expected `string`.
+
+keyExtractor={(item, index) => item.taskId.toString()}
+
+
+// Clear textInput
+
+Add ref to your TextInput, for example:
+
+ <TextInput ref={input => { this.textInput = input }} />
+then call this.textInput.clear() to clear your input value
+
 ===================================
 39-Redux in React Native #5. Add containers to the todo list Redux app
 

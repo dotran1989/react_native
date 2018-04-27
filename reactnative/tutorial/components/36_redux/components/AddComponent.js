@@ -19,6 +19,7 @@ class AddComponent extends Component {
         return (
             <View style={styles.containerStyle}>
                 <TextInput
+                    ref={ input => {this.textInput = input}}
                     style={styles.textInputStyle}
                     keyboardType='default'
                     placeholderTextColor='white'
@@ -39,6 +40,7 @@ class AddComponent extends Component {
                         }
                         // Call click event => use "Container"
                         this.props.addNewTask(this.state.newTaskName);
+                        this.textInput.clear();
                     }}
                 >
                     <Image
