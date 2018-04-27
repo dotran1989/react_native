@@ -103,3 +103,6 @@ import { YellowBox } from 'react-native';
 YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
 
 https://github.com/shubhnik/redux-react-navigation-demos
+https://reactarmory.com/answers/when-to-use-arrow-functions
+https://scrimba.com
+https://research.hackerrank.com/developer-skills/2018/
