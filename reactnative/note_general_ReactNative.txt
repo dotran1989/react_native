@@ -106,3 +106,7 @@ https://github.com/shubhnik/redux-react-navigation-demos
 https://reactarmory.com/answers/when-to-use-arrow-functions
 https://scrimba.com
 https://research.hackerrank.com/developer-skills/2018/
+https://medium.com/search?q=react%20native
+http://xiaoyunyang.github.io/post/problem-solving-using-javascript/
+http://xiaoyunyang.github.io/post/lets-get-productive-with-javascript/
+http://www.reactnativeexpress.com/react_redux
