@@ -110,3 +110,7 @@ https://medium.com/search?q=react%20native
 http://xiaoyunyang.github.io/post/problem-solving-using-javascript/
 http://xiaoyunyang.github.io/post/lets-get-productive-with-javascript/
 http://www.reactnativeexpress.com/react_redux
+https://github.com/shubhnik/redux-react-navigation-demos
+https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html
+https://hackernoon.com/react-native-effective-patterns-3e0c9db6c32c
+https://hackernoon.com/tagged/react-native
