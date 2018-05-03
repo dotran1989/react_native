@@ -30,7 +30,7 @@ class TaskItemComponent extends Component {
                     onPress={() => {
                         // alert(`item: ` + this.props.taskName);
                         this.props.toggleTask(this.props.id)
-                        this.props.parentFlatList.refreshFlatList(this.props.id)
+                        // this.props.parentFlatList.refreshFlatList(this.props.id)
                         // this.refreshListItem()
                     }}
                 >

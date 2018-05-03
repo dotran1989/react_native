@@ -18,7 +18,7 @@ import { StackNavigator } from 'react-navigation';
 // import ViewPagerExample from './components/14_scrollview/ViewPagerExample'
 
 // ----36 - Redux---
-import TaskManagerComponent from './components/36_redux/components/TaskManagerComponent';
+/* import TaskManagerComponent from './components/36_redux/components/TaskManagerComponent';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import allReducers from './components/36_redux/reducers';
@@ -31,7 +31,7 @@ const App = () => {
             <TaskManagerComponent />
         </Provider>
     );
-};
+}; */
 
 // -------
 
@@ -59,4 +59,7 @@ const App = () => {
 // import App from './components/100_react_navigation_redux/app';
 // import LifeCycleComponent from './components/25_lifecycle/LifeCycleComponent';
 
-AppRegistry.registerComponent('tutorial', () => App);
+// ----- 24 - Section List -------
+import SectionList from './components/24_section_list/BasicSectionList';
+
+AppRegistry.registerComponent('tutorial', () => SectionList);
