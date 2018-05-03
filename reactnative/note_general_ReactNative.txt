@@ -146,3 +146,6 @@ https://hackernoon.com/tagged/react-native
 Document need to read
 https://github.com/reactjs/react-redux/blob/master/docs/api.md#examples
 https://redux.js.org/basics/usage-with-react
+https://addyosmani.com/resources/essentialjsdesignpatterns/book/
+
+https://docs.google.com/spreadsheets/d/1kTMElppPuV4c8asrcBcPCwdVc0bXXQn-9O95XlG02CY/edit#gid=1275262418
