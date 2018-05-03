@@ -102,6 +102,33 @@ _ import { Button } from 'react-native-button';
 import { YellowBox } from 'react-native';
 YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
 
+13. Could not install the app on the device, read the error above for details.
+
+node node_modules/react-native/local-cli/cli.js run-android
+chmod 755 android/gradlew
+
+14. "The component for route must be a a React Component" 
+_ export default <class_name>
+
+
+15.
+Error "Employee Update is not a function"
+I also console.log this.props and don't see the function. Is connect not working?
+
+Stephen — Instructor  · a year ago 
+
+Sounds like a broken import or export statement. Two things to be sure of:
+
+1) In your action creator file, make sure you have the following:
+
+export const employeeUpdate =......
+
+2) In the EmployeeCreate file, make sure your import statement is something like:
+
+import { employeeUpdate } from '....' 
+
+In particular, ensure you have the curly braces on there.
+
 https://github.com/shubhnik/redux-react-navigation-demos
 https://reactarmory.com/answers/when-to-use-arrow-functions
 https://scrimba.com
@@ -110,3 +137,8 @@ https://medium.com/search?q=react%20native
 http://xiaoyunyang.github.io/post/problem-solving-using-javascript/
 http://xiaoyunyang.github.io/post/lets-get-productive-with-javascript/
 http://www.reactnativeexpress.com/react_redux
+https://codeburst.io/tagged/react-native
+
+Document need to read
+https://github.com/reactjs/react-redux/blob/master/docs/api.md#examples
+https://redux.js.org/basics/usage-with-react
