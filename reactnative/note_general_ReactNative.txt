@@ -129,6 +129,23 @@ import { employeeUpdate } from '....'
 
 In particular, ensure you have the curly braces on there.
 
+16. Actions must be plain objects. Use custom middleware for async actions.
+
+_ Return actions {type: ..., payload: ...}
+
+_ Federal function: return () => {...} // will be called by redux-thunk
+
+import { YellowBox } from 'react-native';
+import _ from 'lodash';
+ 
+YellowBox.ignoreWarnings(['Setting a timer']);
+const _console = _.clone(console);
+console.warn = message => {
+ if (message.indexOf('Setting a timer') <= -1) {
+ _console.warn(message);
+ }
+};
+
 https://github.com/shubhnik/redux-react-navigation-demos
 https://reactarmory.com/answers/when-to-use-arrow-functions
 https://scrimba.com
@@ -147,5 +164,17 @@ Document need to read
 https://github.com/reactjs/react-redux/blob/master/docs/api.md#examples
 https://redux.js.org/basics/usage-with-react
 https://addyosmani.com/resources/essentialjsdesignpatterns/book/
-
 https://docs.google.com/spreadsheets/d/1kTMElppPuV4c8asrcBcPCwdVc0bXXQn-9O95XlG02CY/edit#gid=1275262418
+
+Meet up
+
+https://www.meetup.com/Ho-Chi-Minh-City-Language-Culture-Meetup/events/249930076/
+
+OOP Javascript
+https://www.class-central.com/course/udacity-object-oriented-javascript-2658?utm_source=fcc_medium&utm_medium=web&utm_campaign=mooc_report_programming_april_2018
+
+Promise JVS
+https://www.class-central.com/course/udacity-javascript-promises-5680?utm_source=fcc_medium&utm_medium=web&utm_campaign=mooc_report_programming_april_2018
+
+Check out these useful ECMAScript 2015 (ES6) tips and tricks
+https://medium.freecodecamp.org/check-out-these-useful-ecmascript-2015-es6-tips-and-tricks-6db105590377
