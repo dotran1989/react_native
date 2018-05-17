@@ -194,5 +194,14 @@ Java
 https://www.coursera.org/specializations/java-programming?recoOrder=8&utm_medium=email&utm_source=recommendations&utm_campaign=jb6pwFk9EeiWLetO06Kdhw
 https://www.coursera.org/learn/object-oriented-java?recoOrder=2&utm_medium=email&utm_source=recommendations&utm_campaign=jb6pwFk9EeiWLetO06Kdhw
 
-Clean code Javascript
+*** Clean code Javascript
 https://github.com/ryanmcdermott/clean-code-javascript
+https://github.com/petkaantonov/bluebird/wiki/Optimization-killers
+https://github.com/abiodunjames/Awesome-Clean-Code-Resources#javascript
+
+*** Cryptocurrency
+https://cryptointel.club/ethereum-bitcoin-va-cac-loai-tien-ma-hoa-khac-con-that-hon-la-do-la-bang-anh-va-vang/
+
+Source ReactNative
+
+https://github.com/jondot/awesome-react-native
