@@ -164,7 +164,10 @@ Document need to read
 https://github.com/reactjs/react-redux/blob/master/docs/api.md#examples
 https://redux.js.org/basics/usage-with-react
 https://addyosmani.com/resources/essentialjsdesignpatterns/book/
+
+Course
 https://docs.google.com/spreadsheets/d/1kTMElppPuV4c8asrcBcPCwdVc0bXXQn-9O95XlG02CY/edit#gid=1275262418
+http://www.quickcode.co/free/tutorials/learn/Web-Development/2
 
 Meet up
 
@@ -178,3 +181,18 @@ https://www.class-central.com/course/udacity-javascript-promises-5680?utm_source
 
 Check out these useful ECMAScript 2015 (ES6) tips and tricks
 https://medium.freecodecamp.org/check-out-these-useful-ecmascript-2015-es6-tips-and-tricks-6db105590377
+
+YouTube - event loop
+https://www.youtube.com/watch?v=8aGhZQkoFbQ
+
+Quick code - React native
+
+https://learn.handlebarlabs.com/courses/enrolled/175915
+
+Java
+
+https://www.coursera.org/specializations/java-programming?recoOrder=8&utm_medium=email&utm_source=recommendations&utm_campaign=jb6pwFk9EeiWLetO06Kdhw
+https://www.coursera.org/learn/object-oriented-java?recoOrder=2&utm_medium=email&utm_source=recommendations&utm_campaign=jb6pwFk9EeiWLetO06Kdhw
+
+Clean code Javascript
+https://github.com/ryanmcdermott/clean-code-javascript
