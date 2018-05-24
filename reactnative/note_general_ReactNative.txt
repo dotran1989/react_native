@@ -168,6 +168,7 @@ https://addyosmani.com/resources/essentialjsdesignpatterns/book/
 Course
 https://docs.google.com/spreadsheets/d/1kTMElppPuV4c8asrcBcPCwdVc0bXXQn-9O95XlG02CY/edit#gid=1275262418
 http://www.quickcode.co/free/tutorials/learn/Web-Development/2
+https://www.pluralsight.com/courses/build-react-native-exponent-redux-apps
 
 Meet up
 
