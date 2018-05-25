@@ -216,6 +216,7 @@ Android
 https://github.com/codepath/android_guides/wiki
 https://github.com/googlesamples/android-architecture-components
 https://github.com/googlesamples/android-architecture
+https://github.com/googlesamples/android-architecture/tree/todo-mvp
 https://github.com/codepath/android_guides/wiki/Beginning-Android-Resources
 https://github.com/hussien89aa/AndroidTutorialForBeginners
 
@@ -223,3 +224,15 @@ Memory Leak
 https://github.com/AliEsaAssadi/avoid-memory-leak-android
 https://github.com/frank-tan/SinsOfMemoryLeaks
 https://github.com/square/leakcanary
+
+RxJava
+https://github.com/amitshekhariitbhu/RxJava2-Android-Samples
+
+Retrofit
+https://github.com/traex/RetrofitExample
+https://github.com/square/retrofit
+
+Android Movie Booking
+https://github.com/tranngoclam/movie-booking
+
+Data structure in Java
